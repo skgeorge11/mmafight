@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>MMA Fighter Sim</title>
+    <style>
+        body {
+            background-image: url("./assets/fighter.jpeg");
+            background-repeat: no-repeat;
+            background-color: #cccccc;
+            background-size: 100%;
+        }
+        label {
+          color: white;
+          text-decoration: none;
+        }
+        form {
+            position: absolute;
+            left: 30px;
+            top: 120px;
+        }
+    </style>
+    <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="./js/mmafight.js"></script>
+</head>
+    <body>
+        <!-- USER LOGIN IN FORM -->
+        <form name="loginForm" onsubmit = "go();return false;" accept-charset="utf-8">
+            <ul>
+                <li><label for="userNameInput">Username</label>
+                <input type="text" id="userNameInput" value = "seth" placeholder="Type your user name here..." required></li>
+                <li><label for="passwordInput"> Password</label>
+                <input type="password" id="passwordInput" value = "pass" placeholder="Type your password here..." required></li>
+                <li>
+                <input type="submit" value="Login"></li>
+            </ul>
+        </form>
+    </body>
+</html>
+

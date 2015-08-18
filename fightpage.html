@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>MMA Fighter Sim</title>
+    <style>
+        body {
+            background-image: url("./assets/fighter.jpeg");
+            background-repeat: no-repeat;
+            background-color: #cccccc;
+            background-size: 100%;
+        }
+        #fullScreenIcon {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+        }
+        #description {
+            border: 1px solid gray;
+            height:150px;
+            width: 600px;
+            background: url("./assets/transparent.png");
+            overflow: hidden;
+            position: absolute;
+            left: 100px;
+            top: 150px;
+        }
+    </style>
+    <link href="./css/perfect-scrollbar.css" rel="stylesheet">
+    <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="./js/perfect-scrollbar.jquery.js"></script>
+    <script src="./js/perfect-scrollbar.js"></script>
+    <script src="./js/mmafight.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function ($) {
+            $('#description').perfectScrollbar({
+              wheelSpeed: 20,
+              wheelPropagation: false
+            });
+        });
+    </script>
+</head>
+    <body>
+        <a href="index.html">home</a>
+        <a href="player.html">player</a>
+        <button id="Add" onclick="addTextDiv('#fightText', 'hello'); return false;">Add Text</button>
+        <div id="description" class="wrapper">
+            <div id ="fightText">
+                <p></p><br>
+                <p></p><br>
+                <p></p><br>
+                <p></p><br>
+                <p></p><br>
+                <p></p><br>
+                <p></p><br>
+                <p></p><br>
+            </div>
+        </div>
+        <!-- <a href="index.html" onclick="maxWindow(); return false;" >hello</a> -->
+    </body>
+</html>
+
