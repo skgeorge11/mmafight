@@ -27,7 +27,7 @@ function createFighter(){
     tempAverage = (skillId*2) - tempSkill;
     skillArray[i] = tempSkill;
   };
-  fireRef.child(locationId).push ({"average skill" : skillId, "quickness": skillArray[0] , "power": skillArray[1],"IQ":skillArray[2]});
+  fireRef.child(locationId).push ({"name": "Mr. Man","average skill" : skillId, "quickness": skillArray[0] , "power": skillArray[1],"IQ":skillArray[2]});
   console.log("created fighter");
 }
 
@@ -40,17 +40,46 @@ function randNum(min,max){
 function nearAverageRandom(startNum, min, max){
   console.log ("nearAverageRandom run");
   for (var i = 0; i < 25; i++) {
-    console.log ("the small number is " +smallNum);
+    // console.log ("the small number is " +smallNum);
     var smallNum = randNum(-2,2);
-    console.log ("the start number is " +startNum);
+    // console.log ("the start number is " +startNum);
     startNum =  1 + startNum;
-    console.log ("the start number is " +startNum);
+    // console.log ("the start number is " +startNum);
     startNum =  smallNum + startNum;
 
-      if (startNum >max){console.log("max number"); startNum = max;}
-      if (startNum <min){console.log("min number");startNum = min;}
+      if (startNum >max){startNum = max;}
+      if (startNum <min){startNum = min;}
   }
   return startNum;
+}
+
+function loadUserFighter (){
+  console.log ("ran load user fighters");
+  var currentUser = localStorage.localUserId;
+  var currentPass = localStorage.localUserPassword;
+  var fighterName = [];
+  var fighterIq =[];
+  //CREATE PROMISE VARIABLE
+  var userArray = userArrayPromise();
+  //CREATE DEFFERED OBJECT
+  function userArrayPromise(){
+    var userDeferred = $.Deferred();
+    fireRef.child(currentUser).once('value', function (snap) {
+      userDeferred.resolve(snap);
+    });
+    return userDeferred.promise();
+  }
+  //FUNCTION ON COMPLETION OF PROMISED DATA.
+  userArray.done(function(fighterArray){
+    fighterArray.forEach(function(fighterChild){
+      if (fighterChild.key()!="password"){
+        fighterIq.push(fighterChild.child("IQ").val());
+        fighterName.push(fighterChild.child("name").val());
+      }
+    });
+    //APPLY DATA TO PLAYER PAGE HERE
+    $("#testFighter").text(fighterName);
+  });
 }
 
 function addTextDiv(location, text) {
@@ -77,14 +106,14 @@ function tryCreateUser(userId, userData) {
           console.log("password matches");
           localStorage.localUserId = userId;
           localStorage.localUserPassword = userData;
-          window.location.assign("fightpage.html");
+          window.location.assign("player.html");
         } else {
           alert("password doesn't match");
         }
       } else {
         console.log("new user created.")
         fireRef.child(userId).set({password : userData});
-        window.location.assign("fightpage.html");
+        window.location.assign("player.html");
       }
   });
 }
