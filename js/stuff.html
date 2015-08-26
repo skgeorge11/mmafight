@@ -5,7 +5,7 @@
     <title>MMA Fighter Sim</title>
     <style>
         body {
-            background-image: url("../assets/shamrock.jpg");
+            background-image: url("../assets/bricklrg.jpg");
             background-repeat: no-repeat;
             background-color: #cccccc;
             background-size: 100%;
@@ -28,6 +28,7 @@
         <a href="../index.html">home</a>
         <a href="../fightpage.html">fight page</a>
         <a href="../player.html">Player Page</a>
+        <a href="../freeagent.html">Rookies</a>
         <!-- Fighter creation form -->
         <form name="createForm" onsubmit = "createFighter();return false;" accept-charset="utf-8">
             <ul>
@@ -35,6 +36,8 @@
                 <input type="text" id="childNameInput" value = "rookie" required></li>
                 <li><label for="skillInput"> Average skill level</label>
                 <input type="text" id="skillInput" value = 50 required></li>
+                <li><label for="fighterNameInput">Fighter Name</label>
+                <input type="text" id="fighterNameInput" value = "Mr. Lame" required></li>
                 <li>
                 <input type="submit" value="Create"></li>
             </ul>

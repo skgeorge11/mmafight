@@ -5,15 +5,10 @@
     <title>MMA Fighter Sim</title>
     <style>
         body {
-            background-image: url("./assets/shamrock.jpg");
+            background-image: url("./assets/bricklrg.jpg");
             background-repeat: no-repeat;
             background-color: #cccccc;
             background-size: 100%;
-        }
-        #attributes {
-            position: absolute;
-            left: 10px;
-            top: 400px;
         }
         table {width:100%;}
         table, th, td {border: 1px solid black;
@@ -26,21 +21,20 @@
             color: white;
         }
     </style>
-
     <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="./js/mmafight.js"></script>
-
 </head>
     <body>
         <a href="index.html">home</a>
         <a href="fightpage.html">fight page</a>
+        <a href="player.html">Player Page</a>
         <a href="./js/stuff.html">stuff page</a>
-        <a href="freeagent.html">Rookies</a>
-        <div id = "attributes" >
-            <table id ="rookieList">
+        <br><br>
+        <table id ="rookieList">
             <tr>
                 <th>Name</th>
+                <th>Cost</th>
                 <th>Age</th>
                 <th>Height</th>
                 <th>Weight</th>
@@ -61,9 +55,6 @@
             <tbody>
             </tbody>
         </table>
-        </div>
-
-        <script type="text/javascript">$(document).ready(loadUserFighter());</script>
+        <script type="text/javascript">$(document).ready(loadRookie());</script>
     </body>
 </html>
-
