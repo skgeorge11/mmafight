@@ -1,0 +1,8 @@
+body {
+	background-image: url("../assets/bricklrg.jpg");
+}
+
+h1, p {
+	text-align: center;
+	color: white;
+}
