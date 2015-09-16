@@ -1,5 +1,8 @@
 body {
 	background-image: url("../assets/bricklrg.jpg");
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    background-size: 100%;
 }
 
 h1, p {
