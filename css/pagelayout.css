@@ -1,0 +1,56 @@
+body {
+    background-image: url("../assets/shamrock.jpg");
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    background-size: 100%;
+    padding: -10px;
+}
+.inlineBox {
+    display: inline-block;
+}
+.sideBanner {
+    display: inline-block;
+    position: relative;
+    left: 0px;
+    margin: 0px;
+    max-width: 15%;
+    height: 100%;
+    border: 2px solid red;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: maroon;
+}
+.verticalLogo {
+    width: 10px;
+    /*position: fixed;*/
+
+}
+#mainContainer {
+    width: 60%;
+}
+#attributes {
+    position: fixed;
+    left: 10px;
+    top: 400px;
+}
+table {
+    width:100%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+table tr:nth-child(even) {
+    background-color: #eee;
+}
+table tr:nth-child(odd) {
+    background-color:#fff;
+}
+table th    {
+    background-color: black;
+    color: white;
+}
