@@ -3,41 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title>MMA Fighter Sim</title>
-    <style>
-        body {
-            background-image: url("./assets/shamrock.jpg");
-            background-repeat: no-repeat;
-            background-color: #cccccc;
-            background-size: 100%;
-        }
-        #attributes {
-            position: absolute;
-            left: 10px;
-            top: 400px;
-        }
-        table {width:100%;}
-        table, th, td {border: 1px solid black;
-            border-collapse: collapse;}
-        th, td {padding: 5px;
-            text-align: left;}
-        table tr:nth-child(even) {background-color: #eee;}
-        table tr:nth-child(odd) {background-color:#fff;}
-        table th    {background-color: black;
-            color: white;
-        }
-    </style>
 
+    <link href="./css/pagelayout.css" rel="stylesheet">
     <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="./js/mmafight.js"></script>
 
 </head>
     <body>
+<<<<<<< HEAD
         <a href="index.html">Home</a>
         <a href="fightpage.html">Fight Page</a>
         <a href="Skills_and_Training.html">Skills & Training Page</a>
         <a href="freeagent.html">Rookies</a>
         <a href="./js/stuff.html">Stuff Page</a>
+=======
+        <div class ="sideBanner">
+            <a class ="verticalLogo" href ="player.html">
+                <img src="./assets/verticalbanner.png">
+            </a>
+        </div>
+        <div class ="inlineBox" id="mainContainer">
+        <a href="index.html">home</a>
+        <a href="fightpage.html">fight page</a>
+        <a href="./js/stuff.html">stuff page</a>
+        <a href="freeagent.html">Rookies</a>
+        </div>
+>>>>>>> origin/Andrew's-Branch
         <div id = "attributes" >
             <table id ="rookieList">
             <tr>
@@ -62,6 +54,11 @@
             <tbody>
             </tbody>
         </table>
+        </div>
+        <div class ="sideBanner">
+            <a class ="verticalLogo" href ="player.html">
+                <img src="./assets/verticalbanner.png">
+            </a>
         </div>
 
         <script type="text/javascript">$(document).ready(loadUserFighter());</script>
