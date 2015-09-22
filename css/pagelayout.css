@@ -1,38 +1,118 @@
 body {
-    background-image: url("../assets/shamrock.jpg");
-    background-repeat: no-repeat;
-    background-color: #cccccc;
+    /*background-image: url("../assets/repeatbackground.jpg");
+    background-repeat: repeat;
+    background-size: 200px 50px;*/
+    background-color: black;
+    padding: 0px;
+    margin: 0px;
+}
+h1{
+    padding:0px;
+    margin: 0px;
+    font-size:3vw;
+}
+.navContainer{
+    position: fixed;
+    top:0px;
+    background: maroon;
+    width: 100%;
+    padding: 2px;
+    min-height:5px;
+    height:10vh;
+    z-index: 1;
+}
+#navGraphic{
+    position: relative;
+    max-height: 10vh;
+}
+#menuIcon{
+    position: relative;
+    max-height: 10vh;
+}
+.centerContainer {
+    background-image: url("../assets/bricksml.jpg");
+    background-repeat: repeat;
     background-size: 100%;
-    padding: -10px;
-}
-.inlineBox {
-    display: inline-block;
-}
-.sideBanner {
     display: inline-block;
     position: relative;
-    left: 0px;
-    margin: 0px;
-    max-width: 15%;
+    margin-top: 8vh;
+    margin-left: 15%;
+    /*height: 2000px;*/
+    min-height: 100vh;
+    width: 70%
+}
+.fighterBox{
+    display:inline;
+    margin-top:9vh;
+}
+.fighterInfoTag{
+    position: absolute;
+    display:inline-block;
+    color: white;
+    height: 4vw;
+    width: 70vw;
+}
+#nameContainer{
+    top: 5%;
+    right: 16%;
+}
+#secondContainer{
+    top: 12%;
+    right: 13%;
+}
+#thirdContainer{
+    top: 19%;
+    right: 14%;
+}
+#fourthContainer{
+    top: 26%;
+    right: 13%;
+}
+.leftFighterInfo{
+    float:right;
+    display:inline-block;
+    text-align: right;
+}
+.rightFighterTag{
+    float:right;
+    display:inline-block;
+    background:maroon;
+    margin-left: 5px;
+}
+#fighterPicture{
+    margin-top: 5%;
+    margin-left: 10%;
+    width:30%;
+}
+.sideBanner {
+    background-image: url("../assets/sidebarheader.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline;
+    margin : 0px;
+    min-width: 15%;
+    /*max-width: 15%;*/
     height: 100%;
-    border: 2px solid red;
-    padding-left: 5%;
-    padding-right: 5%;
+    border: 0px;
+    /*padding: 25%;*/
     background-color: maroon;
+    z-index: 2;
 }
 .verticalLogo {
-    width: 10px;
-    /*position: fixed;*/
-
+    display:block;
+    margin:auto;
+    position: relative;
+    top: 50vh;
+    transform: translateY(-50%);
+    max-width: 50%;
 }
-#mainContainer {
-    width: 60%;
-    /*hi*/
-}
-#attributes {
+#leftBanner {
     position: fixed;
-    left: 10px;
-    top: 400px;
+    left: 0px;
+}
+#rightBanner {
+    position: fixed;
+    right: 0px;
 }
 table {
     width:100%;
