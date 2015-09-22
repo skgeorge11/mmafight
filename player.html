@@ -5,59 +5,62 @@
     <title>MMA Fighter Sim</title>
 
     <link href="./css/pagelayout.css" rel="stylesheet">
+    <link href="./css/dropdownnav.css" rel="stylesheet">
     <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="./js/mmafight.js"></script>
 
 </head>
     <body>
-<<<<<<< HEAD
-        <a href="index.html">Home</a>
-        <a href="fightpage.html">Fight Page</a>
-        <a href="Skills_and_Training.html">Skills & Training Page</a>
-        <a href="freeagent.html">Rookies</a>
-        <a href="./js/stuff.html">Stuff Page</a>
-=======
-        <div class ="sideBanner">c
-            <a class ="verticalLogo" href ="player.html">
-                <img src="./assets/verticalbanner.png">
+
+        <div class ="sideBanner" id="leftBanner">
+            <a href ="player.html">
+                <img src="./assets/verticalbanner3d.png" class ="verticalLogo" >
             </a>
         </div>
-        <div class ="inlineBox" id="mainContainer">
-        <a href="index.html">home</a>
-        <a href="fightpage.html">fight page</a>
-        <a href="./js/stuff.html">stuff page</a>
-        <a href="freeagent.html">Rookies</a>
+
+        <div class="centerContainer">
+            <div class="navContainer">
+                <img src="./assets/repeatbackground.jpg" id="navGraphic">
+                <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="fightpage.html">fight page</a></li>
+                <li><a href="Skills_and_Training.html">Training page</a></li>
+                <li><a href="./js/stuff.html">stuff page</a></li>
+                <li><a href="freeagent.html">Rookies</a></li>
+                <li><a href ="player.html">
+                    <img src="./assets/menuIcon.png" id="menuIcon" >
+                </a><ul>
+                            <li><a href="player.html">option 1</a></li>
+                            <li>Really long text to test the width adaptaion</li>
+                            <li>option 3</li>
+                        </ul></li>
+                </ul>
+            </div>
+            <div class="fighterBox">
+                <img src="./assets/fighterleft1.png" id="fighterPicture">
+            </div>
+            <div class="fighterInfoTag" id="nameContainer">
+                <div class="rightFighterTag"><h1>Name</h1></div>
+                <div class="leftFighterInfo"><h1>Mr. Mouse</h1></div>
+            </div>
+            <div class="fighterInfoTag" id="secondContainer">
+                <div class="rightFighterTag"><h1>Record</h1></div>
+                <div class="leftFighterInfo"><p>0-0-0</p></div>
+            </div>
+            <div class="fighterInfoTag" id="thirdContainer">
+                <div class="rightFighterTag"><h1>Height</h1></div>
+                <div class="leftFighterInfo"><p>72 inches</p></div>
+            </div>
+            <div class="fighterInfoTag" id="fourthContainer">
+                <div class="rightFighterTag"><h1>Weight</h1></div>
+                <div class="leftFighterInfo"><p>138 pounds</p></div>
+            </div>
         </div>
->>>>>>> origin/Andrew's-Branch
-        <div id = "attributes" >
-            <table id ="rookieList">
-            <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Height</th>
-                <th>Weight</th>
-                <th>Reach</th>
-                <th>Prestige</th>
-                <th>Striking Attack</th>
-                <th>Striking Defence</th>
-                <th>Grapple Attack</th>
-                <th>Grapple Defence</th>
-                <th>Initiative</th>
-                <th>Fighting IQ</th>
-                <th>Heart</th>
-                <th>Quickness</th>
-                <th>Strength</th>
-                <th>Durability</th>
-                <th>Stamina</th>
-            </tr>
-            <tbody>
-            </tbody>
-        </table>
-        </div>
-        <div class ="sideBanner">
-            <a class ="verticalLogo" href ="player.html">
-                <img src="./assets/verticalbanner.png">
+
+        <div class ="sideBanner" id="rightBanner">
+            <a href ="player.html">
+                <img src="./assets/verticalbanner3d.png" class ="verticalLogo" >
             </a>
         </div>
 
