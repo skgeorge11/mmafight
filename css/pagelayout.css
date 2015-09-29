@@ -12,7 +12,8 @@ h1{
     font-size:3vw;
 }
 .navContainer{
-    position: fixed;
+    position: absolute;
+    left:14vw;
     top:0px;
     background: maroon;
     width: 100%;
@@ -23,6 +24,7 @@ h1{
 }
 #navGraphic{
     position: relative;
+    left: 0px;
     max-height: 10vh;
 }
 #menuIcon{
@@ -35,15 +37,16 @@ h1{
     background-size: 100%;
     display: inline-block;
     position: relative;
-    margin-top: 8vh;
+    margin-top: 0px;
     margin-left: 15%;
     /*height: 2000px;*/
     min-height: 100vh;
     width: 70%
 }
 .fighterBox{
-    display:inline;
-    margin-top:9vh;
+    position: relative;
+    margin-top: 15vh;
+    margin-left:  5vw;
 }
 .fighterInfoTag{
     position: absolute;
@@ -53,19 +56,19 @@ h1{
     width: 70vw;
 }
 #nameContainer{
-    top: 5%;
+    top: 15%;
     right: 16%;
 }
 #secondContainer{
-    top: 12%;
+    top: 22%;
     right: 13%;
 }
 #thirdContainer{
-    top: 19%;
+    top: 29%;
     right: 14%;
 }
 #fourthContainer{
-    top: 26%;
+    top: 36%;
     right: 13%;
 }
 .leftFighterInfo{
@@ -80,9 +83,12 @@ h1{
     margin-left: 5px;
 }
 #fighterPicture{
-    margin-top: 5%;
-    margin-left: 10%;
     width:30%;
+}
+#loginContain{
+    position: relative;
+    margin-top: 20vh;
+    margin-left: 2%;
 }
 .sideBanner {
     background-image: url("../assets/sidebarheader.jpg");
@@ -114,6 +120,16 @@ h1{
     position: fixed;
     right: 0px;
 }
+.multiFighterList{
+    position: relative;
+    margin-top: 20vh;
+    margin-left: 2%;
+    max-width: 65vw;
+    height:70vh;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    white-space: nowrap;
+}
 table {
     width:100%;
 }
@@ -134,4 +150,9 @@ table tr:nth-child(odd) {
 table th    {
     background-color: black;
     color: white;
+}
+#fightText{
+    background:white;
+    width: 66vw;
+    height: 50vh;
 }

@@ -3,42 +3,43 @@
   <head>
     <meta charset="utf-8">
     <title>MMA Fighter Sim</title>
-    <style>
-        /*include main CSS file instead below*/
-        body {
-            background-image: url("./assets/fighter.jpeg");
-            background-repeat: no-repeat;
-            background-color: #cccccc;
-            background-size: 100%;
-        }
-        label {
-          color: white;
-          text-decoration: none;
-        }
-        form {
-            position: absolute;
-            left: 30px;
-            top: 120px;
-        }
-    </style>
+
+    <link href="./css/pagelayout.css" rel="stylesheet">
+    <link href="./css/dropdownnav.css" rel="stylesheet">
     <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="./js/mmafight.js"></script>
 
 </head>
     <body>
-        <!-- implement the CSS elements, eg' both sideBanner and centerContainer (login for in the center container) -->
+        <div class ="sideBanner" id="leftBanner">
+            <a href ="player.html">
+                <img src="./assets/verticalbanner3d.png" class ="verticalLogo" >
+            </a>
+        </div>
         <!-- USER LOGIN IN FORM -->
-        <form name="loginForm" onsubmit = "go();return false;" accept-charset="utf-8">
-            <ul>
-                <li><label for="userNameInput">Username</label>
-                <input type="text" id="userNameInput" value = "seth" placeholder="Type your user name here..." required></li>
-                <li><label for="passwordInput"> Password</label>
-                <input type="password" id="passwordInput" value = "pass" placeholder="Type your password here..." required></li>
-                <li>
-                <input type="submit" value="Login"></li>
-            </ul>
-        </form>
+        <div class ="navContainer">
+            <img src="./assets/repeatbackground.jpg" id="navGraphic">
+        </div>
+        <div class="centerContainer" >
+            <div id="loginContain">
+            <form name="loginForm" onsubmit = "go();return false;" accept-charset="utf-8">
+                <ul>
+                    <li><label for="userNameInput">Username</label>
+                    <input type="text" id="userNameInput" value = "seth" placeholder="Type your user name here..." required></li>
+                    <li><label for="passwordInput"> Password</label>
+                    <input type="password" id="passwordInput" value = "pass" placeholder="Type your password here..." required></li>
+                    <li>
+                    <input type="submit" value="Login"></li>
+                </ul>
+            </form>
+        </div>
+        </div>
+        <div class ="sideBanner" id="rightBanner">
+            <a href ="player.html">
+                <img src="./assets/verticalbanner3d.png" class ="verticalLogo" >
+            </a>
+        </div>
     </body>
 </html>
 
