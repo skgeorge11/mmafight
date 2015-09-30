@@ -15,21 +15,27 @@ h1{
     position: absolute;
     left:14vw;
     top:0px;
-    background: maroon;
-    width: 100%;
+    background: #490000;
+    width: 70vw;
     padding: 2px;
     min-height:5px;
-    height:10vh;
+    height:9vh;
     z-index: 1;
 }
+/*div.navContainer li {
+    display:inline;
+    position: relative;
+    bottom: 3vh;
+}*/
 #navGraphic{
     position: relative;
     left: 0px;
-    max-height: 10vh;
+    max-height: 8vh;
 }
 #menuIcon{
-    position: relative;
-    max-height: 10vh;
+    /*position: absolute;
+    bottom: -100%;*/
+    max-height: 8vh;
 }
 .centerContainer {
     background-image: url("../assets/bricksml.jpg");
@@ -79,7 +85,7 @@ h1{
 .rightFighterTag{
     float:right;
     display:inline-block;
-    background:maroon;
+    background:#490000;
     margin-left: 5px;
 }
 #fighterPicture{
@@ -130,6 +136,34 @@ h1{
     overflow-y: scroll;
     white-space: nowrap;
 }
+#leftFighter{
+    display:inline-block;
+    /*float:right;*/
+}
+#rightFighter{
+    display:inline-block;
+    float:right;
+}
+#fighterTop{
+    height: 37vw;
+}
+#vsIconContain{
+    display: inline-block;
+    position: absolute;
+    left: 19vw;
+    top: 50vh;
+}
+#vsIconControl{
+    width: 25vw;
+}
+#fightText{
+    background-image:url("../assets/transparent.png");
+    width: 63vw;
+    height: 70vh;
+    margin: 2%;
+    overflow-y: scroll;
+    white-space: wrap;
+}
 table {
     width:100%;
 }
@@ -151,8 +185,7 @@ table th    {
     background-color: black;
     color: white;
 }
-#fightText{
-    background:white;
-    width: 66vw;
-    height: 50vh;
+progress{
+    margin-left:20px;
+    width:80%;
 }

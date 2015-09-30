@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>MMA Fighter Sim</title>
+
+    <link href="./css/pagelayout.css" rel="stylesheet">
+    <link href="./css/dropdownnav.css" rel="stylesheet">
+    <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="./js/mmafight.js"></script>
+
+    </head>
+    <body>
+        <div class ="sideBanner" id="leftBanner">
+            <a href ="player.html">
+                <img src="./assets/verticalbanner3d.png" class ="verticalLogo" >
+            </a>
+        </div>
+
+        <div class="centerContainer">
+            <a href="player.html">Player page</a> <!-- DELETE THIS BEFORE RELEASE TO PUBLIC -->
+            <div id="loginContain">
+                <form name="loginForm" onsubmit = "addTextDiv('#fightText');return false;" accept-charset="utf-8">
+                    <ul>
+                        <li>
+                            <input type="text" id="userFightInput" value = "Kapow" required>
+                        </li>
+                        <li>
+                            <input type="submit" value="Submit">
+                        </li>
+                    </ul>
+                </form>
+                <!-- <button id="Add" onclick="addTextDiv('#fightText'); return false;">Add Text</button> -->
+                <div id ="fightText">
+                </div>
+            </div>
+        </div>
+        <div class ="sideBanner" id="rightBanner">
+            <a href ="player.html">
+                <img src="./assets/verticalbanner3d.png" class ="verticalLogo" >
+            </a>
+        </div>
+        <!-- <a href="index.html" onclick="maxWindow(); return false;" >hello</a> -->
+    </body>
+</html>
+
