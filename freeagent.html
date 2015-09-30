@@ -3,59 +3,71 @@
   <head>
     <meta charset="utf-8">
     <title>MMA Fighter Sim</title>
-    <style>
-        body {
-            background-image: url("./assets/bricklrg.jpg");
-            background-repeat: no-repeat;
-            background-color: #cccccc;
-            background-size: 100%;
-        }
-        table {width:100%;}
-        table, th, td {border: 1px solid black;
-            border-collapse: collapse;}
-        th, td {padding: 5px;
-            text-align: left;}
-        table tr:nth-child(even) {background-color: #eee;}
-        table tr:nth-child(odd) {background-color:#fff;}
-        table th    {background-color: black;
-            color: white;
-        }
-    </style>
+    <link href="./css/pagelayout.css" rel="stylesheet">
+    <link href="./css/dropdownnav.css" rel="stylesheet">
     <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="./js/mmafight.js"></script>
 </head>
     <body>
-        <a href="index.html">Home</a>
-        <a href="fightpage.html">Fight Page</a>
-        <a href="player.html">Player Page</a>
-        <a href="Skills_and_Training.html">Skills & Training Page</a>
-        <a href="./js/stuff.html">Stuff Page</a>
-        <br><br>
-        <table id ="rookieList">
-            <tr>
-                <th>Name</th>
-                <th>Cost</th>
-                <th>Age</th>
-                <th>Height</th>
-                <th>Weight</th>
-                <th>Reach</th>
-                <th>Prestige</th>
-                <th>Striking Attack</th>
-                <th>Striking Defence</th>
-                <th>Grapple Attack</th>
-                <th>Grapple Defence</th>
-                <th>Initiative</th>
-                <th>Fighting IQ</th>
-                <th>Heart</th>
-                <th>Quickness</th>
-                <th>Strength</th>
-                <th>Durability</th>
-                <th>Stamina</th>
-            </tr>
-            <tbody>
-            </tbody>
-        </table>
+        <div class ="sideBanner" id="leftBanner">
+            <a href ="player.html">
+                <img src="./assets/verticalbanner3d.png" class ="verticalLogo" >
+            </a>
+        </div>
+
+        <div class="navContainer">
+            <img src="./assets/repeatbackground.jpg" id="navGraphic">
+            <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="fightpage.html">fight page</a></li>
+            <li><a href="Skills_and_Training.html">Training page</a></li>
+            <li><a href="./js/stuff.html">stuff page</a></li>
+            <li><a href="freeagent.html">Rookies</a></li>
+            <li><a href ="player.html">
+                <img src="./assets/menuIcon.png" id="menuIcon" >
+            </a><ul>
+                        <li><a href="player.html">option 1</a></li>
+                        <li>Really long text to test the width adaptaion</li>
+                        <li>option 3</li>
+                    </ul></li>
+            </ul>
+        </div>
+
+        <div class="centerContainer">
+            <div class="multiFighterList">
+                <h1 style="color:white;">Rookies</h1>
+                <table id ="rookieList">
+                    <tr>
+                        <th>Name</th>
+                        <th>Cost</th>
+                        <th>Age</th>
+                        <th>Height</th>
+                        <th>Weight</th>
+                        <th>Reach</th>
+                        <th>Prestige</th>
+                        <th>Striking Attack</th>
+                        <th>Striking Defence</th>
+                        <th>Grapple Attack</th>
+                        <th>Grapple Defence</th>
+                        <th>Initiative</th>
+                        <th>Fighting IQ</th>
+                        <th>Heart</th>
+                        <th>Quickness</th>
+                        <th>Strength</th>
+                        <th>Durability</th>
+                        <th>Stamina</th>
+                    </tr>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class ="sideBanner" id="rightBanner">
+            <a href ="player.html">
+                <img src="./assets/verticalbanner3d.png" class ="verticalLogo" >
+            </a>
+        </div>
         <script type="text/javascript">$(document).ready(loadRookie());</script>
     </body>
 </html>

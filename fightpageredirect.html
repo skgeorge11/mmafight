@@ -10,36 +10,38 @@
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="./js/mmafight.js"></script>
 
-</head>
+    </head>
     <body>
         <div class ="sideBanner" id="leftBanner">
             <a href ="player.html">
                 <img src="./assets/verticalbanner3d.png" class ="verticalLogo" >
             </a>
         </div>
-        <!-- USER LOGIN IN FORM -->
-        <div class ="navContainer">
-            <img src="./assets/repeatbackground.jpg" id="navGraphic">
-        </div>
-        <div class="centerContainer" >
+
+        <div class="centerContainer">
+            <a href="player.html">Player page</a> <!-- DELETE THIS BEFORE RELEASE TO PUBLIC -->
             <div id="loginContain">
-            <form name="loginForm" onsubmit = "go();return false;" accept-charset="utf-8">
-                <ul>
-                    <li><label for="userNameInput">Username</label>
-                    <input type="text" id="userNameInput" value = "seth" placeholder="Type your user name here..." required></li>
-                    <li><label for="passwordInput"> Password</label>
-                    <input type="password" id="passwordInput" value = "pass" placeholder="Type your password here..." required></li>
-                    <li>
-                    <input type="submit" value="Login"></li>
-                </ul>
-            </form>
-        </div>
+                <form name="loginForm" onsubmit = "addTextDiv('#fightText');return false;" accept-charset="utf-8">
+                    <ul>
+                        <li>
+                            <input type="text" id="userFightInput" value = "Kapow" required>
+                        </li>
+                        <li>
+                            <input type="submit" value="Submit">
+                        </li>
+                    </ul>
+                </form>
+                <!-- <button id="Add" onclick="addTextDiv('#fightText'); return false;">Add Text</button> -->
+                <div id ="fightText">
+                </div>
+            </div>
         </div>
         <div class ="sideBanner" id="rightBanner">
             <a href ="player.html">
                 <img src="./assets/verticalbanner3d.png" class ="verticalLogo" >
             </a>
         </div>
+        <!-- <a href="index.html" onclick="maxWindow(); return false;" >hello</a> -->
     </body>
 </html>
 

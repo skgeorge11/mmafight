@@ -3,73 +3,66 @@
   <head>
     <meta charset="utf-8">
     <title>MMA Fighter Sim</title>
-    <style>
-        body {
-            background-image: url("./assets/fightbackground.jpg");
-            background-repeat: no-repeat;
-            background-color: #cccccc;
-            background-size: 100%;
-        }
-        #fullScreenIcon {
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 300px;
-        }
-        #description {
-            border: 1px solid gray;
-            height:300px;
-            width: 500px;
-            background: url("./assets/transparent.png");
-            overflow: hidden;
-            position: absolute;
-            left: 300px;
-            top: 200px;
-        }
-    </style>
-    <link href="./css/perfect-scrollbar.css" rel="stylesheet">
+
+    <link href="./css/pagelayout.css" rel="stylesheet">
+    <link href="./css/dropdownnav.css" rel="stylesheet">
     <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="./js/perfect-scrollbar.jquery.js"></script>
-    <script src="./js/perfect-scrollbar.js"></script>
     <script src="./js/mmafight.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function ($) {
-            $('#description').perfectScrollbar({
-              wheelSpeed: 20,
-              wheelPropagation: false
-            });
-        });
-    </script>
-</head>
+
+    </head>
     <body>
-        <a href="index.html">Home</a>
-        <a href="player.html">Player Page</a>
-        <a href="Skills_and_Training.html">Skills & Training Page</a>
-        <a href="freeagent.html">Rookies</a>
-        <a href="./js/stuff.html">Stuff Page</a>
-        <button id="Add" onclick="addTextDiv('#fightText', 'Seth successfully strikes glenn for 13 damage'); return false;">Add Text</button>
-        <div id="description" class="wrapper">
-            <div id ="fightText">
-                <p></p><br>
-                <p></p><br>
-                <p></p><br>
-                <p></p><br>
-                <p></p><br>
-                <p></p><br>
-                <p></p><br>
-                <p></p><br>
-                <p></p><br>
-                <p></p><br>
-                <p></p><br>
-                <p></p><br>
-                <p></p><br>
-                <p></p><br>
-                <p></p><br>
-                <p></p><br>
+        <div class ="sideBanner" id="leftBanner">
+            <a href ="player.html">
+                <img src="./assets/verticalbanner3d.png" class ="verticalLogo" >
+            </a>
+        </div>
+
+        <div class="navContainer">
+            <img src="./assets/repeatbackground.jpg" id="navGraphic">
+            <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="player.html">Player page</a></li>
+            <li><a href="Skills_and_Training.html">Training page</a></li>
+            <li><a href="./js/stuff.html">stuff page</a></li>
+            <li><a href="freeagent.html">Rookies</a></li>
+            <li><a href ="player.html">
+                <img src="./assets/menuIcon.png" id="menuIcon" >
+            </a><ul>
+                        <li><a href="player.html">option 1</a></li>
+                        <li>Really long text to test the width adaptaion</li>
+                        <li>option 3</li>
+                    </ul></li>
+            </ul>
+        </div>
+
+        <div class="centerContainer" style=" background-image: url('./assets/fightpagebackground.gif'); background-repeat: no-repeat;">
+            <div id="loginContain">
+                <!-- <button id="Add" onclick="addTextDiv('#fightText', 'Seth successfully strikes glenn for 13 damage'); return false;">Add Text</button>
+                <div id="description" class="wrapper">
+                    <div id ="fightText">
+                        <p></p><br>
+                    </div>
+                </div> -->
+                <div><h3 style="color:white; display:inline">Loading...</h3><progress value="0" max="100" id="progBar1"></progress></div>
+                <div id="leftFighter">
+                    <img src="./assets/fighterlefttop1.png" id="fighterTop">
+                </div>
+                <div id="vsIconContain">
+                    <img src="./assets/vsicon.png" id="vsIconControl">
+                </div>
+                <div id="rightFighter">
+                    <img src="./assets/fighterrighttop2.png" id="fighterTop">
+                </div>
             </div>
         </div>
+        <div class ="sideBanner" id="rightBanner">
+            <a href ="player.html">
+                <img src="./assets/verticalbanner3d.png" class ="verticalLogo" >
+            </a>
+        </div>
         <!-- <a href="index.html" onclick="maxWindow(); return false;" >hello</a> -->
+        <script type="text/javascript">$(document).ready(loadFightScript());</script>
     </body>
 </html>
 

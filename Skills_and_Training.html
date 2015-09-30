@@ -3,18 +3,50 @@
 	<head>
 		<meta charset="utf-8">
 		<title>MMA Fighter Sim</title>
-		<link href="./css/Skills_and_Training.css" rel="stylesheet">
-	</head>
-	<body>
+<link href="./css/pagelayout.css" rel="stylesheet">
+    <link href="./css/dropdownnav.css" rel="stylesheet">
+    <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="./js/mmafight.js"></script>
 
-		<a href="index.html">Home</a>
-		<a href="fightpage.html">Fight Page</a>
-		<a href="player.html">Player Page</a>
-		<a href="freeagent.html">Rookies</a>
-		<a href="./js/stuff.html">Stuff Page</a>
+</head>
+    <body>
+
+        <div class ="sideBanner" id="leftBanner">
+            <a href ="player.html">
+                <img src="./assets/verticalbanner3d.png" class ="verticalLogo" >
+            </a>
+        </div>
+
+        <div class="navContainer">
+            <img src="./assets/repeatbackground.jpg" id="navGraphic">
+            <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="fightpage.html">fight page</a></li>
+            <li><a href="Skills_and_Training.html">Training page</a></li>
+            <li><a href="./js/stuff.html">stuff page</a></li>
+            <li><a href="freeagent.html">Rookies</a></li>
+            <li><a href ="player.html">
+                <img src="./assets/menuIcon.png" id="menuIcon" >
+            </a><ul>
+                        <li><a href="player.html">option 1</a></li>
+                        <li>Really long text to test the width adaptaion</li>
+                        <li>option 3</li>
+                    </ul></li>
+            </ul>
+        </div>
+
+        <div class="centerContainer">
+        	<div id="loginContain" style="color:white; text-align:center;">
 		<h1>Fighter Skills & Training</h1>
 		<p id="body">This is a practice page for me to get acclimated</p>
 		<button id="test" onclick="document.getElementById('body').innerHTML = 'WOOOOOOOOOOOOOOOOOOO!'">Test</button>
-<!--  -->
+	</div>
+        </div>
+	        <div class ="sideBanner" id="rightBanner">
+	            <a href ="player.html">
+	                <img src="./assets/verticalbanner3d.png" class ="verticalLogo" >
+	            </a>
+	        </div>
 	</body>
 </html>

@@ -18,7 +18,7 @@ ul li {
   margin-right: 0px;
   position: relative;
   padding: 0px;
-  background: maroon;
+  background: #490000;
   cursor: pointer;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
@@ -48,7 +48,7 @@ ul li ul {
   -transition: opacity 0.2s;
 }
 ul li ul li {
-  background: #4D0000;
+  background: #490000;
   display: block;
   width: 100%;
   color: #fff;

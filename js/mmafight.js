@@ -118,10 +118,9 @@ function loadUserFighter (){
   });
 }
 
-function addTextDiv(location, text) {
+function addTextDiv(location) {
+    var text = $('#userFightInput').val();
     $('<p>'+text+'</p>').prependTo(location);
-    // $(location).scrollTop( $( location).prop( "scrollHeight" ) );
-    // $(location).perfectScrollbar('update');
   }
 
 //CHECK FOR USER DUPLICATION/ SIGN IN
@@ -152,6 +151,15 @@ function tryCreateUser(userId, userData) {
         window.location.assign("player.html");
       }
   });
+}
+function loadFightScript(){
+  var i = 0;
+  setInterval(function(){
+    console.log(i);
+    i+=10;
+    if (i>100){location.assign("fightpageredirect.html");}
+    $("#progBar1").val(i);
+    }, 300);
 }
 
 // function maxWindow() {
